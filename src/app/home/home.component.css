@@ -1,0 +1,9 @@
+.btn-pistache {
+   background-color: #98FB98; /*verde pistache */
+   color: white; /* Texto blanco */
+   border: none;
+}
+
+.btn-pistache:hover {
+    background-color: #90EE90; /* Un tono más oscuro al pasar el mouse*/
+ }

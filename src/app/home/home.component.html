@@ -1,0 +1,39 @@
+<!-- metas.component.html -->
+<div class="container mt-5">
+  <div class="row">
+    <!-- Columna izquierda: formulario -->
+    <div class="col-md-4">
+      <div class="card shadow p-3">
+        <h5 class="card-title">Agregar Meta Personal</h5>
+        <form (ngSubmit)="agregarMeta()">
+          <div class="mb-3">
+            <label for="nuevaMeta" class="form-label">Nueva meta</label>
+            <input 
+              type="text" 
+              class="form-control" 
+              id="nuevaMeta"  
+              name="nuevaMeta"
+              [(ngModel)]="nuevaMeta" 
+              required
+            />
+          </div>
+          <button type="submit" class="btn btn-pistache">Agregar</button>
+        </form>
+      </div>
+    </div>
+
+    <!-- Columna derecha: lista de metas -->
+    <div class="col-md-8">
+      <div class="card shadow p-3">
+        <h5 class="card-title">Mis Metas: ({{ metaCount }})</h5>
+        <ul class="list-group">
+          <li *ngFor="let item of meta; let i = index" class="list-group-item d-flex justify-content-between align-items-center">
+            <span>{{ item.meta }}</span>
+            <button class="btn btn-pistache" (click)="eliminarMeta(item.id!)">Eliminar</button>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+
