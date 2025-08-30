@@ -41,8 +41,7 @@
             "styles": [
               "src/styles.css"
             ],
-            "scripts": [],
-            "baseHref": "/lifegoals.io/"
+            "scripts": []
           },
           "configurations": {
             "production": {
