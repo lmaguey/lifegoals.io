@@ -39,7 +39,7 @@ jobs:
         run: docker run -d --name http_base httpd
 
       - name: copy model to the Docker image
-        run: docker cp docs/browser/. http_base:/usr/local/apache2/htdocs
+        run: docker cp browser/. http_base:/usr/local/apache2/htdocs
 
       - name: Build the custom Docker image
         run: |
